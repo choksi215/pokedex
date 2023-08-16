@@ -16,33 +16,32 @@ export default function Home() {
       sprite: "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/101.png"
     },
     {
-      id: 1,
+      id: 2,
       name: "Bulbasaur",
       types: ["fire", "wind", "poison"],
       sprite: "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/98.png"
     },
     {
-      id: 1,
+      id: 3,
       name: "Bulbasaur",
       types: ["grass", "normal", "ground", "bug"],
       sprite: "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/112.png"
     },
     {
-      id: 1,
+      id: 4,
       name: "Bulbasaur",
       types: ["grass"],
       sprite: "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/122.png"
     }
   ]
+
   const pokemonList = pokemonArray.map((pokemon: pokemonListTypes) => {
     return (
       <>
         <PokemonRow  {...pokemon} />
       </>
     );
-
   });
-
 
   return (
     <main className="flex min-h-screen flex-col items-center justify-between p-24">

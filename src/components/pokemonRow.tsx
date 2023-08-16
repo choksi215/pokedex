@@ -16,6 +16,7 @@ export default function PokemonRow(props: Props) {
     )
   })
   const sprite = props.sprite
+
   return (
     <>
       <div className="max-w-xs mx-auto my-10 bg-white rounded-lg shadow-md p-5">
@@ -35,7 +36,7 @@ export default function PokemonRow(props: Props) {
         </div>
         <div className="mt-5">
           <h3 className="text-xl font-semibold text-gray-500">{types}</h3>
-          <p className="text-gray-600 mt-2 text-sm">John is a software engineer with over 10 years of experience in developing web and mobile applications. He is skilled in JavaScript, React, and Node.js.</p>
+          <p className="text-gray-600 mt-2 text-sm">When the bulb on its back grows large, it appears to lose the ability to stand on its hind legs.</p>
         </div>
       </div>
     </>
