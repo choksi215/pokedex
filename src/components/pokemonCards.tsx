@@ -7,14 +7,9 @@ interface Props {
   sprite: string;
 }
 
-export default function PokemonRow(props: Props) {
+export default function PokemonCards(props: Props) {
   const name = props.name
   const id = props.id
-  const types = props.types.map((type) => {
-    return (
-      <p key={props.id}>{type}</p>
-    )
-  })
   const sprite = props.sprite
 
   return (
@@ -35,7 +30,13 @@ export default function PokemonRow(props: Props) {
           <a href="#" className="text-blue-500 hover:text-blue-700 mx-3">GitHub</a>
         </div>
         <div className="mt-5">
-          <h3 className="text-xl font-semibold text-gray-500">{types}</h3>
+          <ul className="text-xl font-semibold text-gray-500">{
+            props.types?.map((t, index) => {
+              return (
+                <li key={index}>{t}</li>
+              )
+            })
+          }</ul>
           <p className="text-gray-600 mt-2 text-sm">When the bulb on its back grows large, it appears to lose the ability to stand on its hind legs.</p>
         </div>
       </div>

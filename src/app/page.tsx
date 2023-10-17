@@ -1,11 +1,4 @@
-import PokemonRow from "@/components/pokemonRow"
-
-interface pokemonListTypes {
-  id: number,
-  name: string;
-  types: string[],
-  sprite: string;
-}
+import FilterablePokedexTable from "@/components/FilterablePokedexTable";
 
 export default function Home() {
   const pokemonArray = [
@@ -30,23 +23,15 @@ export default function Home() {
     {
       id: 4,
       name: "Bulbasaur",
-      types: ["grass"],
+      types: ["grass", "psy"],
       sprite: "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/122.png"
     }
   ]
 
-  const pokemonList = pokemonArray.map((pokemon: pokemonListTypes) => {
-    return (
-      <>
-        <PokemonRow  {...pokemon} />
-      </>
-    );
-  });
-
   return (
     <main className="flex min-h-screen flex-col items-center justify-between p-24">
       <div className="container flex justify-between align-middle flex-wrap">
-        {pokemonList}
+        <FilterablePokedexTable pokemons={pokemonArray} />
       </div>
     </main>
   )
