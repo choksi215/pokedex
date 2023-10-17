@@ -16,23 +16,22 @@ interface PokemonListProps {
 
 export default function FilterablePokedexTable({ pokemons }: PokemonListProps) {
     const [selectedType, setSelectedType] = useState<string | undefined>(undefined)
-    let filteredPokemon: PokemonListProps = { pokemons }
+    let filteredPokemon: Pokemon[] = pokemons
 
     if (selectedType) {
-        filteredPokemon.pokemons = []
+        filteredPokemon = []
         pokemons.map((pokemon: Pokemon) => {
             const { types } = pokemon
-            types.includes(selectedType) ? filteredPokemon.pokemons.push(pokemon) : null
+            types.includes(selectedType) ? filteredPokemon.push(pokemon) : null
 
         })
-        console.log(filteredPokemon)
     }
 
 
-    const pokemonList = filteredPokemon.pokemons.map((pokemon: Pokemon) => {
+    const pokemonList = filteredPokemon.map((pokemon: Pokemon) => {
         return (
             <>
-                <PokemonCards key={pokemon.id} {...pokemon} />
+                <PokemonCards key={'pokemon-' + pokemon.id} {...pokemon} />
             </>
         );
     });

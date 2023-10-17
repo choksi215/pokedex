@@ -6,23 +6,23 @@ export default function Home() {
       id: 1,
       name: "Bulbasaur",
       types: ["grass", "wind", "gay"],
-      sprite: "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/101.png"
+      sprite: "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/1.png"
     },
     {
       id: 2,
-      name: "Bulbasaur",
+      name: "ivysaur",
       types: ["fire", "wind", "poison"],
-      sprite: "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/98.png"
+      sprite: "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/2.png"
     },
     {
       id: 3,
-      name: "Bulbasaur",
+      name: "pidgeotto",
       types: ["grass", "normal", "ground", "bug"],
       sprite: "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/112.png"
     },
     {
       id: 4,
-      name: "Bulbasaur",
+      name: "raticate",
       types: ["grass", "psy"],
       sprite: "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/122.png"
     }

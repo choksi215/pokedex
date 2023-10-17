@@ -31,9 +31,9 @@ export default function PokemonCards(props: Props) {
         </div>
         <div className="mt-5">
           <ul className="text-xl font-semibold text-gray-500">{
-            props.types?.map((t, index) => {
+            props.types?.map((t) => {
               return (
-                <li key={index}>{t}</li>
+                <li key={'type-list-' + props.types.indexOf(t)}>{t}</li>
               )
             })
           }</ul>

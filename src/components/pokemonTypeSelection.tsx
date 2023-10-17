@@ -1,13 +1,5 @@
 'use client'
-import Image from 'next/image'
-import { ReactEventHandler, useState } from 'react';
-
-interface Props {
-    id: number,
-    name: string;
-    types: string[],
-    sprite: string;
-}
+import { useState } from 'react';
 
 type PokemonTypeSelectionProps = {
     selectedType: string | undefined;
@@ -18,14 +10,13 @@ export default function PokemonTypeSelection(props: PokemonTypeSelectionProps) {
     const { selectedType, selectType } = props
     const [type, setType] = useState(selectedType)
 
-    const types = ["grass", "normal", "ground", "fire", "wind", "psy"]
+    const typesList = ["grass", "normal", "ground", "fire", "wind", "psy"]
 
     const handletypeChange = (e: any, t: string) => {
         e.preventDefault()
         setType(t)
         selectType(t)
     }
-
 
     return (
         <>
@@ -37,9 +28,9 @@ export default function PokemonTypeSelection(props: PokemonTypeSelectionProps) {
                     onChange={event => handletypeChange(event, event.target.value)}
                     className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
                 >
-                    <option selected value={undefined}>-</option>
-                    {types.map(function (t) {
-                        return (<option key={types.indexOf(t)} value={t}>{t}</option>);
+                    <option value={""}>-</option>
+                    {typesList.map(function (t) {
+                        return (<option key={'types-' + typesList.indexOf(t)} value={t}>{t}</option>);
                     })}
                 </select>
             </div>
