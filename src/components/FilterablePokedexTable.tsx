@@ -1,7 +1,7 @@
 'use client'
 import { useState } from 'react';
-import PokemonCards from './pokemonCards';
-import PokemonTypeSelection from './pokemonTypeSelection';
+import PokemonCards from './PokemonCards';
+import PokemonTypeSelection from './PokemonTypeSelection';
 
 interface Pokemon {
     id: number,
@@ -14,7 +14,7 @@ interface PokemonListProps {
     pokemons: Pokemon[]
 }
 
-export default function FilterablePokedexTable({ pokemons }: PokemonListProps) {
+export function FilterablePokedexTable({ pokemons }: PokemonListProps) {
     const [selectedType, setSelectedType] = useState<string | undefined>(undefined)
     let filteredPokemon: Pokemon[] = pokemons
 

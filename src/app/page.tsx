@@ -1,4 +1,4 @@
-import FilterablePokedexTable from "@/components/FilterablePokedexTable";
+import { FilterablePokedexTable } from "@/components/FilterablePokedexTable";
 
 export default function Home() {
   const pokemonArray = [
